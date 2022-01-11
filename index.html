@@ -106,7 +106,7 @@
 
       <!--Чем занимаемся-->
       <section class="section no-padding-top">
-        <div class="container ">
+        <div class="container">
           <h2 class="kind-work-title centered">Чем мы занимаемся</h2>
           <ul class="kind-work-list">
             <li class="kind-work-item">
@@ -427,9 +427,14 @@
     </footer>
     <!-- MODAL -->
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button data-modal-close>Закрыть</button>
+      <div class="modal">    
+        <svg data-modal-close class="modal_close_btn" width="30" height="30">
+            <use href="images/svg/icons.svg#icon-close"></use>
+        </svg>
       </div>
+
+
+      
     </div>
     <script src="./js/modal.js"></script>
   </body>
