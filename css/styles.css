@@ -12,6 +12,9 @@ html {
   --contacts-footer-color: #fff;
   --web-color: #2196f3;
   --background-color: #2f303a;
+  --animation-color: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-bgcolor: background-color 2250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-boxshadow: box-shadow 3250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: 'Roboto', Raleway, sans-serif;
@@ -39,13 +42,15 @@ a {
 }
 
 a:hover,
-a:active {
+a:active,
+a:focus {
   color: var(--web-color);
 }
 /* a:visited {
   color: tomato;
 } */
-button:hover {
+button:hover,
+button:focus {
   background: var(--web-color);
   color: var(--contacts-footer-color);
 }
@@ -118,7 +123,9 @@ img {
   font-size: 14px;
   line-height: 1.14;
   color: var(--main-color);
+  transition: var(--animation-color);
 }
+
 .contacts-header-mail:focus,
 .contacts-header-tel:focus,
 .navigation-links-title:focus {
@@ -139,23 +146,12 @@ img {
   font-size: 14px;
   line-height: 1.7;
   color: var(--contacts-header-color);
+  transition: var(--animation-color);
 }
 .header-svg {
   fill: currentColor;
   margin-right: 10px;
 }
-/* .contacts-header-mail::before {
-  content: '';
-  width: 16px;
-  height: 12px;
-  background-image: url(../images/svg/envelope.svg);
-  background-size: contain;
-  margin-right: 10px;
-} */
-
-/* .contacts-header-mail::before:hover {
-  fill: var(--web-color);
-} */
 
 .contacts-header-tel {
   align-items: center;
@@ -166,15 +162,8 @@ img {
   font-size: 14px;
   line-height: 1.7;
   color: var(--contacts-header-color);
+  transition: var(--animation-color);
 }
-/* .contacts-header-tel::before {
-  content: '';
-  width: 10px;
-  height: 16px;
-  background-image: url(../images/svg/smartphone.svg);
-  background-size: contain;
-  margin-right: 10px;
-} */
 
 .page-footer {
   background: var(--background-color);
@@ -187,9 +176,7 @@ img {
   font-size: 26px;
   line-height: 1.2;
   font-family: Raleway;
-
   margin-bottom: 20px;
-  /*padding-left: 215px;*/
 }
 .web-studio-link-color-studio-footer {
   color: var(--contacts-footer-color);
@@ -219,6 +206,7 @@ img {
   color: var(--contacts-footer-color);
   opacity: 0.6;
   margin-bottom: 9px;
+  transition: var(--animation-color);
 }
 
 .footer-address-links {
@@ -227,6 +215,7 @@ img {
   line-height: 1.14;
   color: var(--contacts-footer-color);
   margin-bottom: 20px;
+  transition: var(--animation-color);
 }
 .footer-join-text {
   font-weight: 700;
@@ -252,6 +241,8 @@ img {
   border-radius: 50%;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: var(--animation-bgcolor);
 }
 .footer-item {
   fill: currentColor;
@@ -458,6 +449,7 @@ img {
   width: 44px;
   border-radius: 50%;
   color: #afb1b8;
+  transition: var(--animation-color), var(--animation-bgcolor);
 }
 
 .icon-list {
@@ -475,10 +467,6 @@ img {
   color: #fff;
   background-color: var(--web-color);
 }
-
-/* .links-item:hover {
-  fill: var(--web-color);
-} */
 
 .team-names {
   font-weight: 500;
@@ -507,6 +495,7 @@ img {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: var(--animation-color), border 3250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-list {
@@ -556,6 +545,7 @@ img {
   font-size: 16px;
   line-height: 1.6;
   color: var(--main-color);
+  transition: var(--animation-color), var(--animation-bgcolor), var(--animation-boxshadow);
 }
 
 .projects-container {
@@ -569,8 +559,10 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   outline: 1px solid #eeeeee;
+  transition: var(--animation-boxshadow);
 }
-.projects-img-item:hover {
+.projects-img-item:hover,
+.projects-img-item:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2); */
